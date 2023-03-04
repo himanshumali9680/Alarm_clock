@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Serif;
+}
+
+body{
+    background-color: rgb(28, 24, 23);
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* ################# styling for heading ########## */
+
+.heading{
+    width: 100%;
+    height: 65px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    
+}
+
+.h1{
+    font-size: 30px;
+}
+
+.h3{
+    font-size: 20px;
+}
+
+/* ######### styling for current time ######### */
+
+#current-time{
+    display: flex;
+    padding: 10px 10px;
+    margin-top: 20px;
+    font-size: 2em;
+    font-weight: 600;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(243, 241, 241, 0.5);
+}
+
+#current-time div{
+    position: relative;
+    width: 70px;
+    text-align: center;
+    font-weight: 1000;
+    color: rgb(243, 247, 244)
+}
+
+#current-time div:nth-child(1)::after,
+#current-time div:nth-child(2)::after{
+    content: ':';
+    position: absolute;
+    right: -5px;
+}
+
+#current-time div:last-child{
+    font-size: 0.5em;
+    display: flex;
+    justify-items: center;
+    color: #f9f1f2;
+}
+
+#current-time div:nth-child(2)::after{
+    animation: animate 1s steps(1) infinite;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    
+}
+
+/* ########### styling for set alarm ####### */
+
+.alarmtimebody {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.alarmtimebody div{
+    margin-left: 10px;
+    width: 100px;
+}
+.time {
+    width: 100%;
+    padding: 0.5em 0.6em;
+    text-align: center;
+    font-size: 22px;
+    background-color: #232727;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 15px; 
+    box-shadow: 5px 5px 10px rgba(67, 59, 59, 0.5);
+    color: var(--clr);
+}
+    
+hr{
+    width: 70%;
+    color: #fff;
+}
+
+/* ############### styling for button ######### */
+
+.btn{
+    display: flex;
+}
+#setButton {
+    background: rgba(222, 235, 222, 0.5);
+    font-size: 1rem;
+    padding: 0.4em 1em;
+    margin: 2em 2em 0 2em;
+     border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 15px; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+#stopButton {
+    background: rgba(222, 235, 222, 0.5);
+    font-size: 1rem;
+    padding: 0.4em 1em;
+    margin: 2em 2em 0 2em;
+     border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 15px; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ############## styling for alarm list ########  */
+
+#incomplete-alarms {
+    margin-top: 30px;
+}
+
+#incomplete-alarms li{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+#incomplete-alarms li label{
+    list-style: none ;
+    background: rgba(203, 218, 203, 0.5);
+    font-size: 1rem;
+    padding: 0.4em 1em;
+    margin: 10px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 15px; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#incomplete-alarms li button{
+    background: rgba(203, 218, 203, 0.5);
+    font-size: 1rem;
+    padding: 0.4em 1em;
+    margin: 10px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 15px; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+    
+
